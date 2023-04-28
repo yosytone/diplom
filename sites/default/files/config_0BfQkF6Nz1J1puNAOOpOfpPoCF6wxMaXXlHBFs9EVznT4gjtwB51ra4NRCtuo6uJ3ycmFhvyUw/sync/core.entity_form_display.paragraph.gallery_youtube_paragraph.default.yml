@@ -1,0 +1,24 @@
+uuid: f42bac74-2caa-414f-9461-088f08c1d7e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_youtube_paragraph.field_youtubes
+    - paragraphs.paragraphs_type.gallery_youtube_paragraph
+  module:
+    - youtube
+id: paragraph.gallery_youtube_paragraph.default
+targetEntityType: paragraph
+bundle: gallery_youtube_paragraph
+mode: default
+content:
+  field_youtubes:
+    type: youtube
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

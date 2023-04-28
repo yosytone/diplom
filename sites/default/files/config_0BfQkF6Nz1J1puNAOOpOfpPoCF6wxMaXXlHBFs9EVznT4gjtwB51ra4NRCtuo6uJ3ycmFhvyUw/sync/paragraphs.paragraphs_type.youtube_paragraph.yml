@@ -1,0 +1,10 @@
+uuid: 9b9dda7b-db58-4410-ad53-6ad251ff514b
+langcode: en
+status: true
+dependencies: {  }
+id: youtube_paragraph
+label: 'Youtube Paragraph'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

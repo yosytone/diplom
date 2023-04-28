@@ -1,0 +1,21 @@
+uuid: 15aab6d3-844b-455f-bc8a-2e1f73d6a979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_item
+    - paragraphs.paragraphs_type.justtextparagraph
+  module:
+    - text
+id: paragraph.justtextparagraph.field_text_item
+field_name: field_text_item
+entity_type: paragraph
+bundle: justtextparagraph
+label: text_item
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

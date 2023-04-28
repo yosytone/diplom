@@ -1,0 +1,25 @@
+uuid: fe3e9a59-95c4-4e93-81ba-3ddcef81ef93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.justtextparagraph.field_text_item
+    - paragraphs.paragraphs_type.justtextparagraph
+  module:
+    - text
+id: paragraph.justtextparagraph.default
+targetEntityType: paragraph
+bundle: justtextparagraph
+mode: default
+content:
+  field_text_item:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

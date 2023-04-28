@@ -1,0 +1,27 @@
+uuid: 5394d8a0-511d-47ee-a9fe-05fd2e315c40
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.posteditor
+    - node.type.test
+  module:
+    - comment
+    - contact
+    - filter
+    - node
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create test content'
+  - 'search content'
+  - 'use text format posteditor'

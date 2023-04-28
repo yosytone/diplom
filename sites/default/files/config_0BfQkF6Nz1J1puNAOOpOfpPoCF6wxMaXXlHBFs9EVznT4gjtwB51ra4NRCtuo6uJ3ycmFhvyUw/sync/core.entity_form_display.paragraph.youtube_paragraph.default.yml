@@ -1,0 +1,24 @@
+uuid: 6a6026ba-26a2-4eea-9adc-30335794ef94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.youtube_paragraph.field_youtube
+    - paragraphs.paragraphs_type.youtube_paragraph
+  module:
+    - youtube
+id: paragraph.youtube_paragraph.default
+targetEntityType: paragraph
+bundle: youtube_paragraph
+mode: default
+content:
+  field_youtube:
+    type: youtube
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

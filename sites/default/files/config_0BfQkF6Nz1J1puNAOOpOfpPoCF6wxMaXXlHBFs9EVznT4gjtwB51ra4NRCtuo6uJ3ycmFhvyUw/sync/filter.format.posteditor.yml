@@ -1,0 +1,8 @@
+uuid: b79173dd-bf8f-4c86-90c4-192c2cf63b0f
+langcode: en
+status: true
+dependencies: {  }
+name: PostEditor
+format: posteditor
+weight: 0
+filters: {  }
