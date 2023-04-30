@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.test.field_heh
+    - field.field.node.test.field_paragraphs
     - node.type.test
   module:
     - user
@@ -19,4 +19,4 @@ content:
     weight: 0
     region: content
 hidden:
-  field_heh: true
+  field_paragraphs: true

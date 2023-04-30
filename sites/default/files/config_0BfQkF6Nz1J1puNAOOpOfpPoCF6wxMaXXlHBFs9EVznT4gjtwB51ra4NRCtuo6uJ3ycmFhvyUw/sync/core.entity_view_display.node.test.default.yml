@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.test.field_heh
+    - field.field.node.test.field_paragraphs
     - node.type.test
   module:
     - entity_reference_revisions
@@ -13,14 +13,14 @@ targetEntityType: node
 bundle: test
 mode: default
 content:
-  field_heh:
+  field_paragraphs:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 102
+    weight: 103
     region: content
   links:
     settings: {  }

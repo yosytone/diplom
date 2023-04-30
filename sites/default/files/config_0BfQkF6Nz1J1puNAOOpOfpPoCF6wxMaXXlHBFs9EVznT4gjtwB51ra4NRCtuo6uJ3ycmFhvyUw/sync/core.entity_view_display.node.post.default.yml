@@ -1,0 +1,43 @@
+uuid: ba3b54f4-65f9-4e8f-9de6-aa0533371ed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.post.body
+    - field.field.node.post.field_paragrafs
+    - field.field.node.post.field_tag
+    - field.field.node.post.field_tizer_image
+    - node.type.post
+  module:
+    - entity_reference_revisions
+    - user
+id: node.post.default
+targetEntityType: node
+bundle: post
+mode: default
+content:
+  field_paragrafs:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tag:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_tizer_image: true

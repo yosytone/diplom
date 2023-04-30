@@ -1,0 +1,18 @@
+uuid: e0303029-da6e-4fb6-b282-735b8d1a50db
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Запись
+type: post
+description: 'Ваша запись'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
