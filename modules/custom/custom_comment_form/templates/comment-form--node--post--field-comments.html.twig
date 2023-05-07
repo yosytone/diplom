@@ -1,0 +1,48 @@
+<script>
+  var accItem = document.getElementsByClassName('accordionItem');
+  var accHD = document.getElementsByClassName('accordionItemHeading');
+
+  var accClose = document.getElementsByClassName('close_btn');
+
+  for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+  }
+
+  for (i = 0; i < accClose.length; i++) {
+    accClose[i].addEventListener('click', toggleItemClose, false);
+  }
+
+
+
+
+
+  function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+      accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass === 'accordionItem close') {
+      this.parentNode.className = 'accordionItem open';
+    }
+  }
+
+
+  function toggleItemClose() {
+    var itemClass1 = this.parentNode;
+    var itemClass2 = itemClass1.parentNode;
+
+    itemClass2.className = 'accordionItem close';
+  }
+</script>
+
+
+  <div class="accordionItem close">
+    <div class="accordionItemHeading">Написать комментарий...</div>
+      <div class="accordionItemContent">
+        {{ form }}
+        <div class="close_btn">Отмена</div>
+      </div>
+    </div>
+  </div>
+
+<p class="comment_bottom">.</p>

@@ -1,0 +1,110 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for DLOG — Comments module.
+ */
+
+use Drupal\comment\CommentInterface;
+use Drupal\Component\Utility\Color;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Implements hook_theme().
+ */
+function custom_comment_form_theme($existing, $type, $theme, $path) {
+  return [
+    'comment_form__node__post__field_comments' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter() for text_textarea.
+ */
+function custom_comment_form_field_widget_text_textarea_form_alter(&$element, FormStateInterface $form_state, $context) {
+  /** @var \Drupal\Core\Field\FieldItemListInterface $items */
+  $items = $context['items'];
+  $field_name = $items->getFieldDefinition()->getName();
+
+  if ($field_name == 'comment_body') {
+    $element['#after_build'][] = '_custom_comment_form_remove_text_textarea_format';
+  }
+}
+
+/**
+ * After build callback to remove text_textarea format.
+ */
+function _custom_comment_form_remove_text_textarea_format($element, FormStateInterface $form_state) {
+  if ($element['#type'] == 'text_format') {
+    hide($element['format']);
+  }
+
+  return $element;
+}
+
+
+
+function custom_comment_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id=='comment_comment_form') {
+
+    //add class subject
+    $form['subject']['widget']['0']['value']['#attributes']['class'][]='newclass_subject';
+    //add placeholder subject
+    $form['subject']['widget']['0']['value']['#attributes']['placeholder'] = t('Placeholder Subject');
+
+    //add class body
+    $form['comment_body']['widget']['0']['#attributes']['class'][]='newclass_body';
+    //add placeholder body
+    $form['comment_body']['widget']['0']['#attributes']['placeholder'] = t('Текст комментария');
+
+    $form['comment_body']['widget'][0]['#title'] = null;
+    //$form['field_new_comment_body']['widget'][0]['#type'] = null;
+
+  }
+}
+
+
+function custom_comment_form_preprocess_field(&$variables) {
+  $element = $variables['element'];
+
+  if ($element['#field_type'] == 'comment') {
+    $nid = $variables['comment_form']['#lazy_builder'][1][1];
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
+
+    $comment_count = $node->get('field_comments')->comment_count;
+
+    $comment_count_last_digit = substr($comment_count,-1);
+
+    if ($comment_count_last_digit == 1) {
+      $comment_count_text = $comment_count . " Комментарий";
+    }
+    else if ($comment_count_last_digit >= 2 && $comment_count <= 4) {
+      $comment_count_text = $comment_count . " Комментария";
+    }
+    else {
+      $comment_count_text = $comment_count . " Комментариев";
+    }
+
+    $variables['comment_count'] = $comment_count_text;
+
+    // Provide contextual information.
+    $variables['comment_display_mode'] = $element[0]['#comment_display_mode'];
+    $variables['comment_type'] = $element[0]['#comment_type'];
+
+    // Append additional attributes (eg. RDFa) from the first field item.
+    $variables['attributes'] += $variables['items'][0]['attributes']->storage();
+
+    // Create separate variables for the comments and comment form.
+    $variables['comments'] = $element[0]['comments'];
+    $variables['comment_form'] = $element[0]['comment_form'];
+  }
+}
+
+?>

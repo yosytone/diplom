@@ -81,6 +81,10 @@ body {
     background-color: rgb(54, 54, 54);
 }
 
+.comment-form__title {
+    margin-bottom: 40px;
+}
+
 
 .field--name-field-paragrafs {
     background-color: rgb(54, 54, 54);
@@ -110,6 +114,10 @@ body {
     font-family:'Roboto', sans-serif;
     font-size: 18px;
     margin-bottom: 40px;
+}
+
+.post_body {
+   margin-top: 40px;
 }
 
 .field__label {
@@ -165,3 +173,79 @@ body {
     padding: 80px;
     padding-top: 20px;
 }
+
+.newclass_body {
+    height: 50px;
+    background-color: #414040;
+    color: #ffffff;
+}
+
+.field--name-field-comments {
+    padding: 40px;
+}
+
+
+.accordionWrapper {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .accordionItem {
+    float: left;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .accordionItemHeading {
+    cursor: pointer;
+    padding: 20px;
+    background: #5b5b5b;
+    color: #fff;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+  .close .accordionItemContent {
+    height: 0;
+    transition: height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+  }
+  .open .accordionItemContent {
+    padding: 20px;
+    background: #5b5b5b;
+    border: 1px solid #ddd;
+    width: 100%;
+    display: block;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+  }
+  
+  .open .accordionItemHeading {
+    margin: 0;
+  }
+  
+
+  .comment_bottom {
+    color: #414040;
+  }

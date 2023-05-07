@@ -311,3 +311,13 @@ function freelancer_zymphonies_theme_form_system_theme_settings_alter(&$form, Fo
 
   }
 }
+
+
+/*
+function freelancer_zymphonies_theme_field__node__field_comments__post(array &$variables) {
+  $variables['foo'] = 'bar';
+  print render ($variables['comment_form']);
+  print render ($variables['comments']);
+
+}
+*/

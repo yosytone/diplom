@@ -1,0 +1,4 @@
+name: custom_comment_form
+description: My Comment form
+type: module
+core_version_requirement: ^8 || ^9
