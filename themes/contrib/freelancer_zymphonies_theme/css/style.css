@@ -77,6 +77,15 @@ body {
     margin-right: 0;
 }
 
+.post_count {
+    font-size: 24px;
+    background-color: #363636;
+    padding: 80px;
+    padding-bottom: 0;
+    padding-top: 40px;
+    font-weight: bold;
+}
+
 .comment-wrapper {
     background-color: rgb(54, 54, 54);
 }
@@ -178,6 +187,11 @@ body {
     height: 50px;
     background-color: #414040;
     color: #ffffff;
+    border: none;
+}
+
+.newclass_body :focus{
+    border: none;
 }
 
 .field--name-field-comments {
@@ -199,7 +213,7 @@ body {
   .accordionItemHeading {
     cursor: pointer;
     padding: 20px;
-    background: #5b5b5b;
+    background: #4a4a4a;;
     color: #fff;
     width: 100%;
     -webkit-border-radius: 3px;
@@ -222,7 +236,7 @@ body {
   }
   .open .accordionItemContent {
     padding: 20px;
-    background: #5b5b5b;
+    background: #414040;
     border: 1px solid #ddd;
     width: 100%;
     display: block;
@@ -234,18 +248,82 @@ body {
     -o-transform-origin: top;
     -ms-transform-origin: top;
     transform-origin: top;
-    -webkit-transition: -webkit-transform 0.4s ease-out;
-    -o-transition: -o-transform 0.4s ease;
-    -ms-transition: -ms-transform 0.4s ease;
-    transition: transform 0.4s ease;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -o-transition: -o-transform 0.2s ease;
+    -ms-transition: -ms-transform 0.2s ease;
+    transition: transform 0.2s ease;
     box-sizing: border-box;
   }
   
   .open .accordionItemHeading {
     margin: 0;
+    display: none;
   }
   
 
   .comment_bottom {
     color: #414040;
   }
+
+  .close_btn {
+    cursor: pointer;
+  }
+
+.comment_author {
+    border-radius: 50%;
+}
+
+.comment_content p{
+    margin: 0;
+}
+
+.comment_content {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+.row_comments {
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.field--name-user-picture {
+    margin-top: 10px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.field--name-user-picture img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comment_card {
+    margin-top: 40px;
+    background-color: #414040;
+    padding: 20px;
+}
+
+.comment_reply {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.comment_content .links {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.comment_content .links a{
+    color: #ddd;
+}
+
+.comment-wrap {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

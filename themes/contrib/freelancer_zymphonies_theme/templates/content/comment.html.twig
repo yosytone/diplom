@@ -69,6 +69,7 @@
 {% endif %}
 {%
   set classes = [
+    'comment_card',
     'comment',
     'js-comment',
     status != 'published' ? status,
@@ -76,37 +77,25 @@
     author_id and author_id == commented_entity.getOwnerId() ? 'by-' ~ commented_entity.getEntityTypeId() ~ '-author',
   ]
 %}
+
 <article{{ attributes.addClass(classes) }}>
-
-  {#
-    Hide the "new" indicator by default, let a piece of JavaScript ask the
-    server which comments are new for the user. Rendering the final "new"
-    indicator here would break the render cache.
-  #}
-
-  <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
-
+<mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
   <footer class="comment-wrap">
-    <div class="author-details">
-      {{ user_picture }}
-      {{ permalink }}
-      {% if parent %}
-        <p class="parent visually-hidden">{{ parent }}</p>
-      {% endif %}
-    </div>
-
-    <div class="author-comments">
-      <p class="comment-submitted">{{ submitted }}</p>
-      <div{{ content_attributes.addClass('content') }}>
-        {% if title %}
-          {{ title_prefix }}
-          <h3{{ title_attributes }}>{{ title }}</h3>
-          {{ title_suffix }}
-        {% endif %}
-        {{ content }}
+    <div class="row">
+      <div class="col-10">
+        <div class="row_comments">
+          {{ user_picture }}
+        </div>
+        <div class="row_comments">
+          <div class="comment_author">{{ author }}</div>
+          <div class="comment_created">{{ created }}</div>
+        </div>
       </div>
-    </div>   
-
+      <div class="col-10">
+        <div class="comment_content">{{ content }}</div>
+      </div>
+    </div>
   </footer>
-  
 </article>
+
+

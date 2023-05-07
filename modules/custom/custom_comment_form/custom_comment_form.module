@@ -10,6 +10,32 @@ use Drupal\Component\Utility\Color;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
+//use Drupal\comment\CommentInterface;
+
+function custom_comment_form_preprocess_node__post__full(&$vars) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  $comment_count = $node->get('field_comments')->comment_count;
+  $comment_count_last_digit = substr($comment_count,-1);
+
+  if ($comment_count_last_digit == 1) {
+    $comment_count_text = $comment_count . " Комментарий";
+  }
+  else if ($comment_count_last_digit >= 2 && $comment_count <= 4) {
+    $comment_count_text = $comment_count . " Комментария";
+  }
+  else {
+    $comment_count_text = $comment_count . " Комментариев";
+  }
+
+  $vars['comment_count'] = $comment_count_text;
+}
+
+function custom_comment_form_preprocess_comment_form__node__post__field_comments(&$vars) {
+  $vars['dadada'] = "dadada";
+}
+
 
 
 /**
@@ -75,24 +101,6 @@ function custom_comment_form_preprocess_field(&$variables) {
   $element = $variables['element'];
 
   if ($element['#field_type'] == 'comment') {
-    $nid = $variables['comment_form']['#lazy_builder'][1][1];
-    $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
-
-    $comment_count = $node->get('field_comments')->comment_count;
-
-    $comment_count_last_digit = substr($comment_count,-1);
-
-    if ($comment_count_last_digit == 1) {
-      $comment_count_text = $comment_count . " Комментарий";
-    }
-    else if ($comment_count_last_digit >= 2 && $comment_count <= 4) {
-      $comment_count_text = $comment_count . " Комментария";
-    }
-    else {
-      $comment_count_text = $comment_count . " Комментариев";
-    }
-
-    $variables['comment_count'] = $comment_count_text;
 
     // Provide contextual information.
     $variables['comment_display_mode'] = $element[0]['#comment_display_mode'];
@@ -106,5 +114,14 @@ function custom_comment_form_preprocess_field(&$variables) {
     $variables['comment_form'] = $element[0]['comment_form'];
   }
 }
+
+/**
+ * Implements hook_comment_links_alter().
+ */
+function custom_comment_form_comment_links_alter(array &$links, CommentInterface $entity, array &$context) {
+  $author = $entity->getAuthorName();
+  $links['comment']['#links']['comment-reply']['title'] = t('Ответить');
+}
+
 
 ?>

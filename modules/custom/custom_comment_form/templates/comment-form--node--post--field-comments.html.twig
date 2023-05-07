@@ -1,4 +1,5 @@
 <script>
+  var x = 0;
   var accItem = document.getElementsByClassName('accordionItem');
   var accHD = document.getElementsByClassName('accordionItemHeading');
 
@@ -12,20 +13,16 @@
     accClose[i].addEventListener('click', toggleItemClose, false);
   }
 
-
-
-
-
   function toggleItem() {
     var itemClass = this.parentNode.className;
     for (i = 0; i < accItem.length; i++) {
       accItem[i].className = 'accordionItem close';
     }
     if (itemClass === 'accordionItem close') {
-      this.parentNode.className = 'accordionItem open';
+      x = x + 1;
+      this.parentNode.className = 'accordionItem open ' + x;
     }
   }
-
 
   function toggleItemClose() {
     var itemClass1 = this.parentNode;
@@ -34,7 +31,6 @@
     itemClass2.className = 'accordionItem close';
   }
 </script>
-
 
   <div class="accordionItem close">
     <div class="accordionItemHeading">Написать комментарий...</div>
