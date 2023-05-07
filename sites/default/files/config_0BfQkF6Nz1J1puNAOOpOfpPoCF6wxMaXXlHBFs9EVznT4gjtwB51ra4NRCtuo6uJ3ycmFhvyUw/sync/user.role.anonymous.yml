@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.posteditor
+    - filter.format.postcomment
     - node.type.test
   module:
     - comment
@@ -24,4 +24,4 @@ permissions:
   - 'access site-wide contact form'
   - 'create test content'
   - 'search content'
-  - 'use text format posteditor'
+  - 'use text format postcomment'

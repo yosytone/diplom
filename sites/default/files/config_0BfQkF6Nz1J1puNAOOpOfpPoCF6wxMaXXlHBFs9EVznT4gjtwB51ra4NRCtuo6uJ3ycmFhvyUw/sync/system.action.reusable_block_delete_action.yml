@@ -1,0 +1,16 @@
+uuid: ef7524ac-8a96-405c-8af5-3e4407139d5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - gutenberg
+  enforced:
+    module:
+      - gutenberg
+_core:
+  default_config_hash: 6Nffs0f0augGItO21H-DDIcPxIBbB5txCgVuY_3xY8k
+id: reusable_block_delete_action
+label: 'Delete reusable block'
+type: block_content
+plugin: reusable_block_delete_action
+configuration: {  }

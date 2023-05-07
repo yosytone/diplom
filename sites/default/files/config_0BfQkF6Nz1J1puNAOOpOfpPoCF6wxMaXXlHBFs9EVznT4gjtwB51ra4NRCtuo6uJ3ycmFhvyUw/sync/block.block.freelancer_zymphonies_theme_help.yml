@@ -1,0 +1,22 @@
+uuid: e840e729-d04c-4d48-b0d6-e2acdaf2d3b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - freelancer_zymphonies_theme
+_core:
+  default_config_hash: KuWxb9TVNEnnKHjCCRnlzxH3lWG0gZAxbOUsd-U6Tp0
+id: freelancer_zymphonies_theme_help
+theme: freelancer_zymphonies_theme
+region: highlighted
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

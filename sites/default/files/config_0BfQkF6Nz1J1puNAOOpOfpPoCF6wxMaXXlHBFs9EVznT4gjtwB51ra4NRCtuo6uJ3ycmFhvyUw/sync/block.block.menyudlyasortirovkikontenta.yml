@@ -1,0 +1,30 @@
+uuid: bc4bd2db-572e-4c9f-8958-d283ff7d4d69
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3de39244-c70d-4bf7-8a05-74d775c28d2b'
+  module:
+    - block_content
+    - system
+  theme:
+    - freelancer_zymphonies_theme
+id: menyudlyasortirovkikontenta
+theme: freelancer_zymphonies_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:3de39244-c70d-4bf7-8a05-74d775c28d2b'
+settings:
+  id: 'block_content:3de39244-c70d-4bf7-8a05-74d775c28d2b'
+  label: 'Меню для сортировки контента'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

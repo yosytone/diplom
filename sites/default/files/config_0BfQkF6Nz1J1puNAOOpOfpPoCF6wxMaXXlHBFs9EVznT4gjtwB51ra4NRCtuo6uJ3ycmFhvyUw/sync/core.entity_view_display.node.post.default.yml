@@ -3,12 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.post.body
+    - field.field.node.post.field_comments
     - field.field.node.post.field_paragrafs
     - field.field.node.post.field_tag
     - field.field.node.post.field_tizer_image
     - node.type.post
   module:
+    - ajax_comments
+    - comment
     - entity_reference_revisions
     - user
 id: node.post.default
@@ -16,6 +20,17 @@ targetEntityType: node
 bundle: post
 mode: default
 content:
+  field_comments:
+    type: comment_default
+    label: visually_hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings:
+      ajax_comments:
+        enable_ajax_comments: '1'
+    weight: 3
+    region: content
   field_paragrafs:
     type: entity_reference_revisions_entity_view
     label: above

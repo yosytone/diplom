@@ -1,0 +1,21 @@
+uuid: 96692f95-fee2-46cd-9799-fba7ab16eaed
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.diplom_comment
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.diplom_comment.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: diplom_comment
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

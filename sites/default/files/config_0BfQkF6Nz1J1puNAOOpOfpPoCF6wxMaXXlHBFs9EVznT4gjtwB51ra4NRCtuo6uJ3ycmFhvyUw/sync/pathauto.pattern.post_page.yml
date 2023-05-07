@@ -1,0 +1,22 @@
+uuid: f0a104ec-d078-4b45-84f3-49bb33c658f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: post_page
+label: 'Страница записи'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  839b6600-6782-4d7e-8edf-bd63826b00d4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 839b6600-6782-4d7e-8edf-bd63826b00d4
+    context_mapping:
+      node: node
+    bundles:
+      post: post
+selection_logic: and
+weight: -5
+relationships: {  }

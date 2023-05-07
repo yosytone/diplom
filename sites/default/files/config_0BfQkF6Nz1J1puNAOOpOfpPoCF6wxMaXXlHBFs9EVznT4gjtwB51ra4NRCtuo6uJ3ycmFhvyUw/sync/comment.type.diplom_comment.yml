@@ -1,0 +1,8 @@
+uuid: ce9ea2aa-7a51-4a05-bec1-2f42fa15d74a
+langcode: en
+status: true
+dependencies: {  }
+id: diplom_comment
+label: 'Diplom Comment'
+target_entity_type_id: block_content
+description: ''
