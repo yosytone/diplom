@@ -63,8 +63,6 @@
  *   in different view modes.
  */
 #}
-
-
 <article>
     <div class="post_body">
         <div class="post_info">
@@ -74,10 +72,19 @@
             {{ label }}
         </div>
         <div class="post_author">
+            {{ author_picture }}
             {{ author_name }}
         </div>
         <div class="post_content">
             {{ content.field_paragrafs }}
+        </div>
+        <div class="post_vote">
+            <div class="post_vote_desc">
+                Понравилась статья? Оцени!
+            </div>
+            <div class="post_vote_widget">
+                {{ content.like_and_dislike }}
+            </div>
         </div>
     </div>
     <div class="post_count">

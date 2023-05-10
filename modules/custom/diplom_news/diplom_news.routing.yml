@@ -1,0 +1,9 @@
+pizza.pageAJAX:
+  path: '/PizzaAJAX'
+  defaults:
+    _form: '\Drupal\pizza\Form\AjaxForm'
+    _title: 'Pizza (AJAX version)'
+  requirements:
+    _permission: 'access content'
+
+

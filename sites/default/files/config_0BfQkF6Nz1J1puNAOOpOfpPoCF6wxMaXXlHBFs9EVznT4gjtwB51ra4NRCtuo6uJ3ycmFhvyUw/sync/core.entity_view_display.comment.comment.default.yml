@@ -23,6 +23,11 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  like_and_dislike:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }

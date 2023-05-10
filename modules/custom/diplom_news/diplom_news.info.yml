@@ -1,0 +1,5 @@
+name: 'diplom_news'
+description: 'diplom_news'
+package: my
+type: module
+core_version_requirement: ^9

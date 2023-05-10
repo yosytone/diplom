@@ -103,7 +103,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: justtextparagraph
+      default_paragraph_type: head
     third_party_settings: {  }
   field_tag:
     type: entity_reference_autocomplete_tags

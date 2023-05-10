@@ -32,12 +32,6 @@ function custom_comment_form_preprocess_node__post__full(&$vars) {
   $vars['comment_count'] = $comment_count_text;
 }
 
-function custom_comment_form_preprocess_comment_form__node__post__field_comments(&$vars) {
-  $vars['dadada'] = "dadada";
-}
-
-
-
 /**
  * Implements hook_theme().
  */

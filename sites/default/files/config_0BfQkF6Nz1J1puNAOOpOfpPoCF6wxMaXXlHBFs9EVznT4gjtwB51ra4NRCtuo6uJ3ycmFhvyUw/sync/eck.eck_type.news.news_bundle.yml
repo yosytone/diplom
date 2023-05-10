@@ -1,0 +1,9 @@
+uuid: b2975cd0-39e3-440f-b008-91047e74a57e
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.news
+name: news_bundle
+type: news_bundle
+description: ''

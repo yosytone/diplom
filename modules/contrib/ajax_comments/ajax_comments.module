@@ -69,6 +69,7 @@ function ajax_comments_comment_links_alter(array &$links, CommentInterface $enti
     // to attach ajax behaviors to them.
     if (isset($links['comment']['#links']['comment-edit'])) {
       $classes = [
+        'only-reply',
         'use-ajax',
         'js-use-ajax-comments',
         'js-ajax-comments-edit',

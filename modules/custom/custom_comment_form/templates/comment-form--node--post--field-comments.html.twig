@@ -1,5 +1,5 @@
 <script>
-  var x = 0;
+  var x = 1;
   var accItem = document.getElementsByClassName('accordionItem');
   var accHD = document.getElementsByClassName('accordionItemHeading');
 
@@ -7,6 +7,8 @@
 
   for (i = 0; i < accHD.length; i++) {
     accHD[i].addEventListener('click', toggleItem, false);
+    x = i;
+    accHD[i].className = 'accordionItemHeading ' + x;
   }
 
   for (i = 0; i < accClose.length; i++) {
@@ -16,10 +18,10 @@
   function toggleItem() {
     var itemClass = this.parentNode.className;
     for (i = 0; i < accItem.length; i++) {
-      accItem[i].className = 'accordionItem close';
+      
+      accItem[i].className = 'accordionItem closer';
     }
-    if (itemClass === 'accordionItem close') {
-      x = x + 1;
+    if (itemClass === 'accordionItem closer') {
       this.parentNode.className = 'accordionItem open ' + x;
     }
   }
@@ -28,11 +30,12 @@
     var itemClass1 = this.parentNode;
     var itemClass2 = itemClass1.parentNode;
 
-    itemClass2.className = 'accordionItem close';
+    itemClass2.className = 'accordionItem closer';
   }
+
 </script>
 
-  <div class="accordionItem close">
+  <div class="accordionItem closer">
     <div class="accordionItemHeading">Написать комментарий...</div>
       <div class="accordionItemContent">
         {{ form }}
@@ -40,5 +43,3 @@
       </div>
     </div>
   </div>
-
-<p class="comment_bottom">.</p>

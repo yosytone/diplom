@@ -1,0 +1,21 @@
+uuid: acb25985-83df-4e74-9b22-9118294adc49
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+    - entity_reference_revisions
+    - paragraphs
+id: news.field_news_paragraph
+field_name: field_news_paragraph
+entity_type: news
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -11,7 +11,6 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
-      - heading
       - bold
       - underline
       - italic
@@ -21,13 +20,6 @@ settings:
       - code
       - link
   plugins:
-    ckeditor5_heading:
-      enabled_headings:
-        - heading2
-        - heading3
-        - heading4
-        - heading5
-        - heading6
     ckeditor5_list:
       reversed: true
       startIndex: true

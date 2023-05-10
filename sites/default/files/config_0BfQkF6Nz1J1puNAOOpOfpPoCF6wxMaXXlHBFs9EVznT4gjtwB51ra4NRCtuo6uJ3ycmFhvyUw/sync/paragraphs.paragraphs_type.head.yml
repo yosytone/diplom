@@ -1,0 +1,10 @@
+uuid: 039fe330-255a-4864-a5ab-438c1bde9e35
+langcode: en
+status: true
+dependencies: {  }
+id: head
+label: Загаловок
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

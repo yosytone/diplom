@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.postcomment
-    - node.type.test
+    - node.type.post
   module:
     - comment
     - contact
@@ -24,8 +24,12 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'create test content'
+  - 'administer themes'
+  - 'create post content'
+  - 'delete own post content'
+  - 'edit own post content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format postcomment'
+  - 'view the administration theme'

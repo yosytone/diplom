@@ -1,0 +1,8 @@
+uuid: c64e6905-f765-4d06-9070-badd232bde3c
+langcode: en
+status: true
+dependencies: {  }
+id: rate
+label: Rate
+value_type: points
+description: ''

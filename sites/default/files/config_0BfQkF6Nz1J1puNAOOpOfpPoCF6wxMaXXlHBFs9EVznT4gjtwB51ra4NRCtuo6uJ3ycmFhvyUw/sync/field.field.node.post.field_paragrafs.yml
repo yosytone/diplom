@@ -24,18 +24,21 @@ settings:
     negate: 0
     target_bundles_drag_drop:
       gallery_image_paragraph:
-        weight: -8
+        weight: -9
         enabled: false
       gallery_youtube_paragraph:
-        weight: -7
+        weight: -8
+        enabled: false
+      head:
+        weight: -13
         enabled: false
       justimageparagraph:
-        weight: -10
-        enabled: false
-      justtextparagraph:
         weight: -11
         enabled: false
+      justtextparagraph:
+        weight: -12
+        enabled: false
       youtube_paragraph:
-        weight: -9
+        weight: -10
         enabled: false
 field_type: entity_reference_revisions

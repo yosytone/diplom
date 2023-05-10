@@ -18,6 +18,7 @@ module:
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
+  eck: 0
   editor: 0
   entity_reference_revisions: 0
   examples: 0
@@ -27,11 +28,11 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  gutenberg: 0
   help: 0
   history: 0
   image: 0
   js_example: 0
+  like_and_dislike: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -53,6 +54,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  votingapi: 0
   youtube: 0
   pathauto: 1
   views: 10

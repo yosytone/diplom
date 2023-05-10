@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - filter.format.postcomment
-    - node.type.test
   module:
     - comment
     - contact
     - filter
-    - node
     - search
     - system
 _core:
@@ -22,6 +20,5 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'create test content'
   - 'search content'
   - 'use text format postcomment'

@@ -92,10 +92,18 @@
         </div>
       </div>
       <div class="col-10">
-        <div class="comment_content">{{ content }}</div>
+        <div class="comment_content">
+          {{ content|without('like_and_dislike', 'links') }}
+          <div class="row">
+            <div class="col-6 comment_links">{{ content.links }}</div>
+            <div class="col-6 comment_vote">{{ content.like_and_dislike }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 </article>
+
+
 
 

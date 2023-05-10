@@ -16,9 +16,11 @@
 }
 
 body {
-    background-color: rgb(32, 32, 32);
+    background-color: #131313;
     color: aliceblue;
 }
+
+
 
 .flexslider {
     background-color: rgb(54, 54, 54);
@@ -79,15 +81,11 @@ body {
 
 .post_count {
     font-size: 24px;
-    background-color: #363636;
-    padding: 80px;
+    background-color: #202020;
+    padding: 120px;
     padding-bottom: 0;
     padding-top: 40px;
     font-weight: bold;
-}
-
-.comment-wrapper {
-    background-color: rgb(54, 54, 54);
 }
 
 .comment-form__title {
@@ -96,7 +94,7 @@ body {
 
 
 .field--name-field-paragrafs {
-    background-color: rgb(54, 54, 54);
+    /*background-color: #363636;*/
 }
 
 .post_title {
@@ -126,15 +124,26 @@ body {
 }
 
 .post_body {
-   margin-top: 40px;
+    background-color:#202020;
+    padding: 40px;
+    margin-bottom: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .field__label {
     display: none;
 }
 
+.field--name-field-head {
+    font-size: 29px;
+    font-weight: bold;
+}
+
 .field__item p {
-    margin-top: 40px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-family: Roboto, sans-serif;
 }
 
 .field__item h3, h2, h1 {
@@ -155,9 +164,7 @@ body {
 }
 
 .field--name-field-text-item {
-    padding: 80px;
-    padding-top: 0;
-    padding-bottom: 0;
+
 }
 
 .field--name-field-image-item {
@@ -170,17 +177,10 @@ body {
     line-height: 1.5;
 }
 
-.field__items {
-    padding-top: 20px;
-}
-
-.field__items {
-    padding-bottom: 20px;
-}
-
-#node-post-field-comments {
-    padding: 80px;
-    padding-top: 20px;
+.comment-wrapper {
+    background-color: #202020;
+    padding: 120px;
+    padding-top: 0;
 }
 
 .newclass_body {
@@ -194,18 +194,8 @@ body {
     border: none;
 }
 
-.field--name-field-comments {
-    padding: 40px;
-}
-
-
-.accordionWrapper {
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-  }
   .accordionItem {
-    float: left;
+
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -224,7 +214,7 @@ body {
     font-weight: 100;
   }
 
-  .close .accordionItemContent {
+  .closer .accordionItemContent {
     height: 0;
     transition: height 1s ease-out;
     -webkit-transform: scaleY(0);
@@ -263,6 +253,7 @@ body {
 
   .comment_bottom {
     color: #414040;
+    font-size: 1px;
   }
 
   .close_btn {
@@ -282,6 +273,14 @@ body {
     margin-top: 20px;
 }
 
+.comment_vote {
+    width: 100%;
+}
+
+.comment_vote .vote-widget-wrapper {
+    position: absolute;
+    right: 0;
+}
 
 .row_comments {
     float: left;
@@ -301,13 +300,16 @@ body {
 }
 
 .comment_card {
-    margin-top: 40px;
-    background-color: #414040;
-    padding: 20px;
+    margin-top: 15px;
+    background-color: #282727;
+    padding: 15px;
+    padding-bottom: 15px;
+    padding-bottom: 0;
+    padding-right: 0;
 }
 
 .comment_reply {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 12px;
     color: #ddd;
 }
@@ -326,4 +328,29 @@ body {
     border: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+.breadcrumb {
+    background-color:#242323;
+}
+
+.breadcrumb a{
+    color: #fff;
+}
+
+.post_vote {
+    text-align: center;
+    margin-top: 80px;
+    /*border: 4px solid #7476F4;*/
+    padding: 20px;
+    border-bottom: 2px solid #A4A4A4;
+}
+
+.post_vote_desc {
+    margin-bottom: 20px;
+}
+
+.post_vote_widget {
+    font-size: 28px;
+
 }
