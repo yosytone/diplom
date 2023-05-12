@@ -1,0 +1,13 @@
+name: 'Paragraphs Webform'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:field
+  - paragraphs:paragraphs
+  - webform:webform
+
+# Information added by Drupal.org packaging script on 2022-10-20
+version: '2.0.0'
+project: 'paragraphs_webform'
+datestamp: 1666250098

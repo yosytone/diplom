@@ -15,6 +15,7 @@ use Drupal\file\Entity\File;
 use Drupal\Core\Url;
 use Drupal\file\Plugin\Core\Entity\FileInterface;
 use Drupal\comment\CommentInterface;
+use Drupal\statistics\NodeStatisticsDatabaseStorage;
 
 /**
  * Implements hook_preprocess_page() for block templates.
@@ -314,13 +315,11 @@ function freelancer_zymphonies_theme_form_system_theme_settings_alter(&$form, Fo
 }
 
 
-/*
-function freelancer_zymphonies_theme_field__node__field_comments__post(array &$variables) {
-  $variables['foo'] = 'bar';
-  print render ($variables['comment_form']);
-  print render ($variables['comments']);
+function freelancer_zymphonies_theme_preprocess_node__post__full(&$variables) {
+  $variables['node_view_count'] = 0;
 
+  $statistics = \Drupal::service('statistics.storage.node')->fetchView(254);
+  $variables['node_view_count'] = $statistics->getTotalCount();
+    
+  
 }
-*/
-
-

@@ -1,7 +1,7 @@
-pizza.pageAJAX:
-  path: '/PizzaAJAX'
+diplom_news.pageAJAX:
+  path: '/diplom_news'
   defaults:
-    _form: '\Drupal\pizza\Form\AjaxForm'
+    _form: '\Drupal\diplom_news\Form\AjaxForm'
     _title: 'Pizza (AJAX version)'
   requirements:
     _permission: 'access content'

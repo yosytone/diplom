@@ -63,10 +63,14 @@
  *   in different view modes.
  */
 #}
+
+{{ dump() }}
 <article>
     <div class="post_body">
         <div class="post_info">
-            некая информация, дата, просмотры
+            просмотры {{ node_view_count }}
+            {{ date }}
+            {{ comment_count }}
         </div>
         <div class="post_title">
             {{ label }}

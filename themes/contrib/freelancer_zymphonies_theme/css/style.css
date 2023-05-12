@@ -354,3 +354,29 @@ body {
     font-size: 28px;
 
 }
+
+
+.news-news-bundle-form {
+    background-color: #414040;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.field-multiple-table :hover {
+    background-color: #414040;
+}
+
+.ck-editor__editable { 
+    color: #000;
+}
+
+.ck-editor__editable :hover { 
+    background-color: #ffffff;
+    color: #000;
+}
+
+.btn {
+    background: #4a4a4a;
+}
+
+#cke_edit-body .cke_wysiwyg_frame {background:#c90f1c}
