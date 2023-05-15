@@ -1,0 +1,5 @@
+blog.add_form:
+  route_name: entity.blog.add_form
+  title: 'Add blog'
+  appears_on:
+    - entity.blog.collection

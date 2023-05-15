@@ -1,0 +1,29 @@
+uuid: 1c02dd33-b073-4cbb-ac14-78c3a245af84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraphs_ief_image.field_ief_image
+    - image.style.medium
+    - paragraphs.paragraphs_type.paragraphs_ief_image
+  module:
+    - image
+_core:
+  default_config_hash: _S3H15pcDQUiT2q8TsAYOPF9Ad1eJtDLl0ItANRySSo
+id: paragraph.paragraphs_ief_image.default
+targetEntityType: paragraph
+bundle: paragraphs_ief_image
+mode: default
+content:
+  field_ief_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

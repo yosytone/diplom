@@ -1,0 +1,24 @@
+uuid: 26cc391e-c2fc-4e08-a628-9521305dd3e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.popularslider
+  module:
+    - views
+  theme:
+    - freelancer_zymphonies_theme
+id: views_block__popularslider_block_1
+theme: freelancer_zymphonies_theme
+region: features_first
+weight: 0
+provider: null
+plugin: 'views_block:popularslider-block_1'
+settings:
+  id: 'views_block:popularslider-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,22 @@
+entity.area_pizza.settings:
+  title: Settings
+  route_name: entity.area_pizza.settings
+  base_route: entity.area_pizza.settings
+entity.area_pizza.view:
+  title: View
+  route_name: entity.area_pizza.canonical
+  base_route: entity.area_pizza.canonical
+entity.area_pizza.edit_form:
+  title: Edit
+  route_name: entity.area_pizza.edit_form
+  base_route: entity.area_pizza.canonical
+entity.area_pizza.delete_form:
+  title: Delete
+  route_name: entity.area_pizza.delete_form
+  base_route: entity.area_pizza.canonical
+  weight: 10
+entity.area_pizza.collection:
+  title: area_pizza
+  route_name: entity.area_pizza.collection
+  base_route: system.admin_content
+  weight: 10

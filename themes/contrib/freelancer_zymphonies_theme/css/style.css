@@ -3,6 +3,22 @@
     box-shadow: none;
 }
 
+a {
+    color:#ddd;
+}
+
+a :hover{
+    color:#8f8e8e;
+}
+
+li {
+    color:#ddd;
+}
+
+li :hover{
+    color:#8f8e8e;
+}
+
 .breaking-news {
     background-color: rgb(54, 54, 54);
     height: 500px;
@@ -31,6 +47,7 @@ body {
 }
 
 .card_content {
+    width: 400px;
     height: 300px;
     background-color: rgb(54, 54, 54);
 }
@@ -82,7 +99,7 @@ body {
 .post_count {
     font-size: 24px;
     background-color: #202020;
-    padding: 120px;
+    padding: 180px;
     padding-bottom: 0;
     padding-top: 40px;
     font-weight: bold;
@@ -127,8 +144,8 @@ body {
     background-color:#202020;
     padding: 40px;
     margin-bottom: 40px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
 .field__label {
@@ -150,7 +167,7 @@ body {
     margin-top: 40px;
 }
 
-.paragraph--type--justimageparagraph {
+.paragraph--type--paragraphs-ief-image {
     width: 100%;
     height: auto;
     text-align: center;
@@ -163,9 +180,10 @@ body {
     margin-top: 40px;
 }
 
-.field--name-field-text-item {
-
+.youtube-container {
+    text-align: center;
 }
+
 
 .field--name-field-image-item {
     margin: 40px;
@@ -179,8 +197,8 @@ body {
 
 .comment-wrapper {
     background-color: #202020;
-    padding: 120px;
-    padding-top: 0;
+    padding: 180px;
+    padding-top: 10px;
 }
 
 .newclass_body {
@@ -203,7 +221,7 @@ body {
   .accordionItemHeading {
     cursor: pointer;
     padding: 20px;
-    background: #4a4a4a;;
+    background: #282828;;
     color: #fff;
     width: 100%;
     -webkit-border-radius: 3px;
@@ -355,28 +373,18 @@ body {
 
 }
 
+.postform {
 
-.news-news-bundle-form {
-    background-color: #414040;
-    padding: 40px;
-    color: #ffffff;
 }
 
-.field-multiple-table :hover {
-    background-color: #414040;
+
+.main-content {
+    font-size: 100%;
+    line-height: 30px;
+    font-weight: 300;
+    font-style: normal;
 }
 
-.ck-editor__editable { 
-    color: #000;
+.post_title {
+    line-height: 1.5;
 }
-
-.ck-editor__editable :hover { 
-    background-color: #ffffff;
-    color: #000;
-}
-
-.btn {
-    background: #4a4a4a;
-}
-
-#cke_edit-body .cke_wysiwyg_frame {background:#c90f1c}

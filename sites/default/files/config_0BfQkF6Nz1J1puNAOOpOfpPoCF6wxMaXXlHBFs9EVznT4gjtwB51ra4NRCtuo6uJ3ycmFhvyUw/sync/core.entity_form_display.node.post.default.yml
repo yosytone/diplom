@@ -101,9 +101,9 @@ content:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: open
-      add_mode: dropdown
+      add_mode: select
       form_display_mode: default
-      default_paragraph_type: head
+      default_paragraph_type: justtextparagraph
     third_party_settings: {  }
   field_tag:
     type: entity_reference_autocomplete_tags
@@ -156,7 +156,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Загаловок блога'
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

@@ -4,23 +4,65 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.gallery_image_paragraph.field_gallery
+    - image.style.medium
     - paragraphs.paragraphs_type.gallery_image_paragraph
   module:
-    - image
+    - slick
 id: paragraph.gallery_image_paragraph.default
 targetEntityType: paragraph
 bundle: gallery_image_paragraph
 mode: default
 content:
   field_gallery:
-    type: image
-    label: above
+    type: slick_image
+    label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
+      caption:
+        title: '0'
+        alt: '0'
+      optionset: default
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: classic
+      lazy: ''
+      style: column
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      box_style: ''
+      image_style: medium
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+      use_theme_field: false
+      preserve_keys: false
+      visible_items: null
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden: {  }

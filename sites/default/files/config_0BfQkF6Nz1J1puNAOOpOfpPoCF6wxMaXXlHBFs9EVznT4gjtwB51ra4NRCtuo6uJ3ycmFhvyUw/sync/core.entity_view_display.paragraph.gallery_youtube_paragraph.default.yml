@@ -14,7 +14,7 @@ mode: default
 content:
   field_youtubes:
     type: youtube_video
-    label: above
+    label: hidden
     settings:
       youtube_size: 450x315
       youtube_width: ''

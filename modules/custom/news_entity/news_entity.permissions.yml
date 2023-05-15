@@ -1,0 +1,4 @@
+administer news_entity configuration:
+  title: 'Administer news_entity configuration'
+  description: 'Optional description.'
+  restrict access: true

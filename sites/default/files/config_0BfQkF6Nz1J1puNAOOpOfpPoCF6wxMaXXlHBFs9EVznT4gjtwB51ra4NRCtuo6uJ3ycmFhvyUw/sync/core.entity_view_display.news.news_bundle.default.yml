@@ -1,12 +1,12 @@
-uuid: e48e6586-d0cf-4a60-9671-f9f869131afc
+uuid: 7eeabd7e-06c8-4722-b5cf-7011068be84a
 langcode: en
 status: true
 dependencies:
   config:
     - eck.eck_type.news.news_bundle
-    - field.field.news.news_bundle.field_news_paragraph
+    - field.field.news.news_bundle.field_mail
   module:
-    - entity_reference_revisions
+    - user
 id: news.news_bundle.default
 targetEntityType: news
 bundle: news_bundle
@@ -22,12 +22,10 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_news_paragraph:
-    type: entity_reference_revisions_entity_view
+  field_mail:
+    type: basic_string
     label: above
-    settings:
-      view_mode: default
-      link: ''
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
@@ -38,6 +36,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: -5
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   changed: true

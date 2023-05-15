@@ -1,0 +1,45 @@
+<script>
+  var x = 1;
+  var accItem = document.getElementsByClassName('accordionItem');
+  var accHD = document.getElementsByClassName('accordionItemHeading');
+
+  var accClose = document.getElementsByClassName('close_btn');
+
+  for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+    x = i;
+    accHD[i].className = 'accordionItemHeading ' + x;
+  }
+
+  for (i = 0; i < accClose.length; i++) {
+    accClose[i].addEventListener('click', toggleItemClose, false);
+  }
+
+  function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+      
+      accItem[i].className = 'accordionItem closer';
+    }
+    if (itemClass === 'accordionItem closer') {
+      this.parentNode.className = 'accordionItem open ' + x;
+    }
+  }
+
+  function toggleItemClose() {
+    var itemClass1 = this.parentNode;
+    var itemClass2 = itemClass1.parentNode;
+
+    itemClass2.className = 'accordionItem closer';
+  }
+
+</script>
+
+  <div class="accordionItem closer">
+    <div class="accordionItemHeading">Написать комментарий...</div>
+      <div class="accordionItemContent">
+        {{ form }}
+        <div class="close_btn">Отмена</div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,5 @@
+name: diplom_userpage
+description: diplom-userpage
+package: my
+type: module
+core_version_requirement: ^9

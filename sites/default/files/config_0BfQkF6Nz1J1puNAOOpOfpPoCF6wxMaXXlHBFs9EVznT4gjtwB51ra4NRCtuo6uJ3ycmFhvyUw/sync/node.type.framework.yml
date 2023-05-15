@@ -1,0 +1,16 @@
+uuid: a7849a78-f2a6-4ce9-85d2-855899ce1fe9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - dynamic_form
+_core:
+  default_config_hash: c6Vif_rjQUGHcbwftAbAavQejpvSeSn6PJyrUOnTu-0
+name: Framework
+type: framework
+description: 'Used to collect web and software development framework content'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

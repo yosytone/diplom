@@ -53,230 +53,73 @@ class AjaxForm extends FormBase {
       $form_state->set('p', $p);
     }
 
-    $form['tags'] = [
-      '#type' => 'details',
-      '#title' => "Tags",
-      '#open' => TRUE,
-      '#description' => "The description of the field.",
-    ];
-    $form['tags']['addtag'] = [
-      '#type' => 'submit',
-      '#value' => 'Загаловок',
-      '#submit' => ['::addOneTag'],
-      '#weight' => 100,
+    $form['contacts'] = [
+      '#type' => 'multivalue',
+      '#title' => $this->t('Contacts'),
+      'sel' => [
+        '#type' => 'select',
+        '#title' => $this
+          ->t('Select element'),
+        '#options' => [
+            '1' => $this
+              ->t('One'),
+            '2' => $this
+              ->t('two'),
+        ],
       '#ajax' => [
-        'callback' => '::updateTagCallback',
-        'wrapper' => 'tagfields-wrapper',
-        'method' => 'replace',
+        'callback' => '::promptCallback',
+        'wrapper' => 'replace-textfield-container',
+        ],
       ],
-    ];
-    
-    $form['tags']['addText'] = [
-      '#type' => 'submit',
-      '#value' => 'Текст',
-      '#submit' => ['::addOneText'],
-      '#weight' => 100,
-      '#ajax' => [
-        'callback' => '::updateTextCallback',
-        'wrapper' => 'tagfields-wrapper',
-        'method' => 'replace',
+      'name' => [
+        '#type' => 'textfield',
+        '#title' => $this->t('Name'),
       ],
-    ];
-
-    $form['tags']['addYoutube'] = [
-      '#type' => 'submit',
-      '#value' => 'Youtube',
-      '#submit' => ['::addOneYoutube'],
-      '#weight' => 100,
-      '#ajax' => [
-        'callback' => '::updateYoutubeCallback',
-        'wrapper' => 'tagfields-wrapper',
-        'method' => 'replace',
+      'mail' => [
+        '#type' => 'email',
+        '#title' => $this->t('E-mail'),
       ],
     ];
 
-    $form['tags']['addImage'] = [
-      '#type' => 'submit',
-      '#value' => 'Картинка',
-      '#submit' => ['::addOneImage'],
-      '#weight' => 100,
-      '#ajax' => [
-        'callback' => '::updateImageCallback',
-        'wrapper' => 'tagfields-wrapper',
-        'method' => 'replace',
-      ],
-    ];
 
-    $form['tags']['addGallery'] = [
-      '#type' => 'submit',
-      '#value' => 'Галерея',
-      '#submit' => ['::addOneGallery'],
-      '#weight' => 100,
-      '#ajax' => [
-        'callback' => '::updateGalleryCallback',
-        'wrapper' => 'tagfields-wrapper',
-        'method' => 'replace',
-      ],
-    ];
 
-    $form['tags']['tag_values'] = [
+
+
+    // The 'replace-textfield-container' container will be replaced whenever
+    // 'changethis' is updated.
+    $form['replace_textfield_container'] = [
       '#type' => 'container',
-      '#tree' => TRUE,
-      '#prefix' => '<div id="tagfields-wrapper">',
-      '#suffix' => '</div>',
+      '#attributes' => ['id' => 'replace-textfield-container'],
+    ];
+    $form['replace_textfield_container']['replace_textfield'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t("Why"),
     ];
 
-    foreach ($p as $key => $value) {
-      if ($value == 0 || $value == 1) {
-        $form['tags']['tag_values'][$key] = [
-          '#type' => 'textfield',
-          '#title' => $this
-            ->t('Subject'),
-          '#value' => '1',
-        ];
-      }
-
-      if ($value == 2) {
-        $form['tags']['tag_values'][$key] = [
-          '#type' => 'text_format',
-          '#title' => $this->t('Description'),
-          '#format' => 'rich_text',
-        ];
-      }
-
-      if ($value == 3) {
-        $form['tags']['tag_values'][$key] = [
-          '#type' => 'textfield',
-          '#title' => $this
-            ->t('Youtube'),
-          '#value' => '1',
-        ];
-      }
-
-      if ($value == 4) {
-        $form['tags']['tag_values'][$key] = [
-          '#type' => 'managed_file',
-          '#title' => 'my file',
-          '#name' => 'my_custom_file',
-          //'#multiple' => TRUE,
-          '#description' => $this->t('my file description'),
-          '#upload_location' => 'public://'
-        ];
-      }
-
-      if ($value == 5) {
-        $form['tags']['tag_values'][$key] = [
-          '#type' => 'managed_file',
-          '#title' => 'my file',
-          '#name' => 'my_custom_file',
-          '#multiple' => TRUE,
-          '#description' => $this->t('my file description'),
-          '#upload_location' => 'public://'
-        ];
-      }
-
-      $form['tags']['tag_values'][$key+1] = [
-        '#type' => 'submit',
-        '#value' => $key+1,
-        '#submit' => ['::DeleteParagraph'],
-        '#ajax' => [
-          'callback' => '::updateTextCallback',
-          'method' => 'replace',
-      ],
-      ];
-
-
+    // An AJAX request calls the form builder function for every change.
+    // We can change how we build the form based on $form_state.
+    $value = $form_state->getValue('contacts');
+    // The getValue() method returns NULL by default if the form element does
+    // not exist. It won't exist yet if we're building it for the first time.
+    if ($value !== NULL) {
+      $form['replace_textfield_container']['replace_textfield']['#description'] =
+        $this->t("Say why you chose '@value'", ['@value' => $value]);
     }
-
-
     return $form;
-  } 
-
-  public function addOneTag(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 1;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
   }
 
-  public function addOneText(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 2;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
-  }
-
-  public function addOneYoutube(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 3;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
-  }
-
-  public function addOneImage(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 4;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
-  }
-
-  public function addOneGallery(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 4;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
-  }
-
-  public function DeleteParagraph(array &$form, FormStateInterface $form_state) {
-    $p = $form_state->get('p');
-    //$p[3] = 'three';
-    $pkey = array_key_last($p);
-    $p[$pkey+2] = 4;
-
-    $form_state->set('p', $p);
-    $form_state->setRebuild(TRUE);
-  }
-
-
-  public function updateTagCallback(array &$form, FormStateInterface $form_state) {
-      return $form['tags']['tag_values'];
-  }
-  public function updateTextCallback(array &$form, FormStateInterface $form_state) {
-    return $form['tags']['tag_values'];
-  }
-  public function updateYoutubeCallback(array &$form, FormStateInterface $form_state) {
-    return $form['tags']['tag_values'];
-  }
-  public function updateImageCallback(array &$form, FormStateInterface $form_state) {
-    return $form['tags']['tag_values'];
-  }
-  public function updateGalleryCallback(array &$form, FormStateInterface $form_state) {
-    return $form['tags']['tag_values'];
-  }
-
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-
+    // No-op. Our form doesn't need a submit handler, because the form is never
+    // submitted. We add the method here so we fulfill FormInterface.
   }
 
+  /**
+   * Handles switching the available regions based on the selected theme.
+   */
+  public function promptCallback($form, FormStateInterface $form_state) {
+    return $form['replace_textfield_container'];
+  }
 }
-
-
-
-
-
-

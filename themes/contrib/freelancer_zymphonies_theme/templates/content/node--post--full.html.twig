@@ -64,13 +64,13 @@
  */
 #}
 
-{{ dump() }}
 <article>
     <div class="post_body">
         <div class="post_info">
             просмотры {{ node_view_count }}
             {{ date }}
             {{ comment_count }}
+            {{ content.flag_bookmark }}
         </div>
         <div class="post_title">
             {{ label }}

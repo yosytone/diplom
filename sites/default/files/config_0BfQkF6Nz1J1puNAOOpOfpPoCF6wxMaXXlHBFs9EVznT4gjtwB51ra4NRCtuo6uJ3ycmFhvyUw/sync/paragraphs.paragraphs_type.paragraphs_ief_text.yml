@@ -1,0 +1,14 @@
+uuid: 4e82ffa0-7632-426f-98ef-b45b3d31511e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:f3b0072c-30d1-4520-b95d-15e620bd5aae'
+_core:
+  default_config_hash: ZPsena6r6jND0rmqYjBzsMtKkSE31LbdolRE91NqVS8
+id: paragraphs_ief_text
+label: Text
+icon_uuid: f3b0072c-30d1-4520-b95d-15e620bd5aae
+icon_default: null
+description: ''
+behavior_plugins: {  }

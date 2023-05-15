@@ -1,0 +1,14 @@
+uuid: 1f284876-28eb-4f29-84c4-3927a72187a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:68789502-1f80-457b-812a-7b811c4362ba'
+_core:
+  default_config_hash: FsMmXIye4ceYoc-aVEF95J1GSvUW5HeF-8RNfIUTqKo
+id: paragraphs_ief_image
+label: Image
+icon_uuid: 68789502-1f80-457b-812a-7b811c4362ba
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+name: area_pizza
+type: module
+description: 'Provides an area_pizza entity.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: entity.area_pizza.settings

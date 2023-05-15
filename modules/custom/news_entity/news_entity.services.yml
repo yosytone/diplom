@@ -1,0 +1,6 @@
+services:
+  news_entity.event_subscriber:
+    class: Drupal\news_entity\EventSubscriber\NewsEntitySubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

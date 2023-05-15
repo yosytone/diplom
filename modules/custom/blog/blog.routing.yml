@@ -1,0 +1,7 @@
+entity.blog.settings:
+  path: 'admin/structure/blog'
+  defaults:
+    _form: '\Drupal\blog\Form\BlogSettingsForm'
+    _title: 'blog'
+  requirements:
+    _permission: 'administer blog'

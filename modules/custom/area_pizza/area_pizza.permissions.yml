@@ -1,0 +1,5 @@
+administer area_pizza:
+  title: 'Administer area_pizza settings'
+  restrict access: true
+access area_pizza overview:
+  title: 'Access area_pizza overview page'

@@ -1,0 +1,48 @@
+uuid: 19550313-e8a8-4188-bbfb-f3ca35843a71
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.paragrapheditor
+  module:
+    - ckeditor
+format: paragrapheditor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - paragraphs_inline_entity_form
+        -
+          name: Tools
+          items:
+            - Source
+  plugins: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

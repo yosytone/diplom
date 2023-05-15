@@ -1,0 +1,77 @@
+uuid: c2ddde5a-7bc5-4536-837e-02d9fca9a1a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.article
+  module:
+    - entity_reference_revisions
+id: node.article.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: article
+label: paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      gallery_image_paragraph:
+        weight: 18
+        enabled: false
+      gallery_youtube_paragraph:
+        weight: 19
+        enabled: false
+      head:
+        weight: 20
+        enabled: false
+      justimageparagraph:
+        weight: 21
+        enabled: false
+      justtextparagraph:
+        weight: 22
+        enabled: false
+      media:
+        weight: 23
+        enabled: false
+      paragraphs_ief_columns:
+        weight: 24
+        enabled: false
+      paragraphs_ief_facebook:
+        weight: 25
+        enabled: false
+      paragraphs_ief_gallery:
+        weight: 26
+        enabled: false
+      paragraphs_ief_image:
+        weight: 27
+        enabled: false
+      paragraphs_ief_instagram:
+        weight: 28
+        enabled: false
+      paragraphs_ief_text:
+        weight: 29
+        enabled: false
+      paragraphs_ief_twitter:
+        weight: 30
+        enabled: false
+      paragraphs_ief_view:
+        weight: 31
+        enabled: false
+      paragraphs_ief_youtube:
+        weight: 32
+        enabled: false
+      webform:
+        weight: 33
+        enabled: false
+      youtube_paragraph:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

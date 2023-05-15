@@ -1,0 +1,7 @@
+news_entity.settings_form:
+  path: '/admin/config/system/news-entity'
+  defaults:
+    _title: 'news_entity settings'
+    _form: 'Drupal\news_entity\Form\SettingsForm'
+  requirements:
+    _permission: 'administer news_entity configuration'

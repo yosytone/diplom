@@ -1,0 +1,17 @@
+{
+    "name": "drupal/multivalue_form_element",
+    "description": "Provides a form element that wraps existing form elements, making them multi-value.",
+    "type": "drupal-module",
+    "license": "EUPL-1.2",
+    "homepage": "https://www.drupal.org/project/multivalue_form_element",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/multivalue_form_element",
+        "source": "https://git.drupalcode.org/project/multivalue_form_element"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "drupal/core": "^9.3 || ^10"
+    }
+}

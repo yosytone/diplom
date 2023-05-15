@@ -16,8 +16,11 @@
  * @see template_preprocess_user()
  */
 #}
+{{dump()}}
+{{ elements.user.uid.value }}
 <article{{ attributes.addClass('profile') }}>
   {% if content %}
     {{- content -}}
   {% endif %}
 </article>
+{{ elements.user.uid.value }}

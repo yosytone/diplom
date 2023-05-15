@@ -1,0 +1,22 @@
+entity.blog.settings:
+  title: Settings
+  route_name: entity.blog.settings
+  base_route: entity.blog.settings
+entity.blog.view:
+  title: View
+  route_name: entity.blog.canonical
+  base_route: entity.blog.canonical
+entity.blog.edit_form:
+  title: Edit
+  route_name: entity.blog.edit_form
+  base_route: entity.blog.canonical
+entity.blog.delete_form:
+  title: Delete
+  route_name: entity.blog.delete_form
+  base_route: entity.blog.canonical
+  weight: 10
+entity.blog.collection:
+  title: blog
+  route_name: entity.blog.collection
+  base_route: system.admin_content
+  weight: 10

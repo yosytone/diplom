@@ -1,0 +1,34 @@
+uuid: fd98bcd1-2fdc-46d0-aad9-aa4808370f3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.paragraphs_ief_example.body
+    - field.field.node.paragraphs_ief_example.field_ief_paragraphs
+    - node.type.paragraphs_ief_example
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: o1JybOpSfukb8OEt3DURlniD9mzHWUIF-Gebvt486Kk
+id: node.paragraphs_ief_example.teaser
+targetEntityType: node
+bundle: paragraphs_ief_example
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ief_paragraphs: true

@@ -1,0 +1,29 @@
+uuid: d84fffd5-6a34-49a1-9ead-0810bd71982d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.paragraphs_ief_example
+  module:
+    - text
+_core:
+  default_config_hash: OCOpbqE3VlleX_nvFVqA67eBhE_emFcEmcLsJat2laA
+id: node.paragraphs_ief_example.body
+field_name: body
+entity_type: node
+bundle: paragraphs_ief_example
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p>Example text</p>\r\n"
+    format: paragraphs_ief_example
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

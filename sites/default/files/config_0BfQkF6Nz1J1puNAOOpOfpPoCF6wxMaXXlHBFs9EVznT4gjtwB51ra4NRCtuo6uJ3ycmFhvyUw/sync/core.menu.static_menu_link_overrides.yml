@@ -7,3 +7,15 @@ definitions:
     weight: 0
     expanded: false
     enabled: true
+  dynamic_form__form_demo:
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+    weight: 0
+  dynamic_form__form_demo_using_state:
+    enabled: false
+    menu_name: main
+    parent: ''
+    weight: 0
+    expanded: false

@@ -1,0 +1,7 @@
+entity.area_pizza.settings:
+  path: 'admin/structure/area-pizza'
+  defaults:
+    _form: '\Drupal\area_pizza\Form\AreaPizzaSettingsForm'
+    _title: 'area_pizza'
+  requirements:
+    _permission: 'administer area_pizza'

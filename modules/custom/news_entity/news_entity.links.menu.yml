@@ -1,0 +1,6 @@
+news_entity.settings_form:
+  title: news_entity
+  description: Configure news_entity.
+  parent: system.admin_config_system
+  route_name: news_entity.settings_form
+  weight: 10

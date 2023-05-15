@@ -1,0 +1,24 @@
+<?php
+
+
+function diplom_userpage_preprocess_user(&$val) {
+  //$val = null;
+  //print_r ($val);
+  $uid = $val['user']->get('uid')->getValue();
+  $val['uid'] = $uid[0]['value'];
+
+  //$flag_id = 'bookmark';
+  //$flag_service = \Drupal::service('flag');
+  //$flag = $flag_service->getFlagById($flag_id);
+  //$val['flag'] = $flag;
+
+  $query = \Drupal::database()->select('flagging', 'nfd');
+  $query->fields('nfd', ['entity_id']);
+  $query->condition('nfd.uid', $val['uid']);
+  $result = $query->execute()->fetchAll();
+
+  $val['flag'] = $result;
+
+
+
+}

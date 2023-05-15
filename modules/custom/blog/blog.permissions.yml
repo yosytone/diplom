@@ -1,0 +1,5 @@
+administer blog:
+  title: 'Administer blog settings'
+  restrict access: true
+access blog overview:
+  title: 'Access blog overview page'

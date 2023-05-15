@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.paragrapheditor
     - filter.format.postcomment
     - node.type.post
   module:
     - comment
     - contact
     - filter
+    - media
     - node
     - search
     - shortcut
@@ -31,5 +33,7 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use text format paragrapheditor'
   - 'use text format postcomment'
+  - 'view media'
   - 'view the administration theme'

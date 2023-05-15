@@ -23,6 +23,8 @@ use Drupal\statistics\NodeStatisticsDatabaseStorage;
 
 function freelancer_zymphonies_theme_preprocess_page(&$variables) {
 
+  $vars['#attached']['library'][] = 'core/drupal.ajax';
+
   // Add responsive class
   if (!empty($variables['page']['topwidget_first']) && !empty($variables['page']['topwidget_second']) && !empty($variables['page']['topwidget_third'])) {
     $variables['topwidget_class'] = 'col-sm-4';
@@ -318,8 +320,51 @@ function freelancer_zymphonies_theme_form_system_theme_settings_alter(&$form, Fo
 function freelancer_zymphonies_theme_preprocess_node__post__full(&$variables) {
   $variables['node_view_count'] = 0;
 
-  $statistics = \Drupal::service('statistics.storage.node')->fetchView(254);
-  $variables['node_view_count'] = $statistics->getTotalCount();
-    
-  
+
+  //$statistics = \Drupal::service('statistics.storage.node')->fetchView(254);
+  //$variables['node_view_count'] = $statistics->getTotalCount();
+
+  //$variables['user_picture'] = file_create_url($account->user_picture->entity->getFileUri());
+
+
+  $uid = $variables['user']->id('id');
+  $variables['uid'] = $uid;
+
+  $account = \Drupal\user\Entity\User::load('uid'); // pass your uid
+  $name = $account->getUsername();
+
+  $variables['uid']
+
+  //$author_picture = file_create_url($account->user_picture->entity->getFileUri());
+
+
+     
+}
+
+function freelancer_zymphonies_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'node_edit_form') {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+     $content_type = $node->bundle();
+    }
+    else {
+      $current_path = \Drupal::service('path.current')->getPath();
+      $path_args = explode('/', $current_path);
+      $content_type = $path_args[3];
+    }
+    $suggestions[] = 'node_edit_form__' . $content_type;
+  } 
+}
+
+function freelancer_zymphonies_theme_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  $form['#theme'] = ['node_edit_form'];
+
+
+  $form['advanced']['#type'] = 'container';
+  $form['advanced']['#accordion'] = TRUE;
+  $form['meta']['#type'] = 'container';
+  $form['meta']['#access'] = TRUE;
+
+  $form['revision_information']['#type'] = 'container';
+  $form['revision_information']['#group'] = 'meta';
+  $form['revision_information']['#attributes']['class'][] = 'entity-meta__revision';
 }

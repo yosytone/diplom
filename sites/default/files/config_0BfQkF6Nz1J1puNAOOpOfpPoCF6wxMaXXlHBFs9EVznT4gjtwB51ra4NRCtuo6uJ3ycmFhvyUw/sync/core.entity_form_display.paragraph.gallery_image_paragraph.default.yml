@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.gallery_image_paragraph.field_gallery
-    - image.style.thumbnail
+    - image.style.medium
     - paragraphs.paragraphs_type.gallery_image_paragraph
   module:
     - image
@@ -19,7 +19,7 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
     third_party_settings: {  }
 hidden:
   created: true
